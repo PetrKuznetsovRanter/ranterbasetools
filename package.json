@@ -1,0 +1,18 @@
+{
+  "name": "com.ranter.basetools",
+  "version": "0.0.1",
+  "displayName": "RanterBaseTools",
+  "description": "This is package with some basic patterns and tools for unity.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "dependencies": {},
+  "keywords": [],
+  "author": {
+    "name": "Ranter",
+    "email": "7ranter7@gmail.com",
+    "url": ""
+  }
+}
