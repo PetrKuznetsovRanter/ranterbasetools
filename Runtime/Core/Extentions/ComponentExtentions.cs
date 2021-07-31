@@ -10,9 +10,6 @@ namespace RanterTools.Base
     /// </summary>
     public static class ComponentExtentions
     {
-
-        #region Global State
-        #region ComponentPool
         /// <summary>
         /// Pool of Components.
         /// </summary>
@@ -21,11 +18,7 @@ namespace RanterTools.Base
         /// <returns>Dictionary for rapid access of instances.</returns>
         static Dictionary<Component, ComponentPool> pool = new Dictionary<Component, ComponentPool>();
         public static GameObject rootComponentForPools;
-        #endregion ComponentPool
-        #endregion Global State
-
-        #region Global Methods
-        #region ComponentPool
+        
         /// <summary>
         /// Initiate Components pool with size.
         /// </summary>
@@ -104,10 +97,6 @@ namespace RanterTools.Base
                 pool[origin].Destroy(Component);
             }
         }
-        #endregion ComponentPool
-
-
-        #endregion Unity
     }
 
 

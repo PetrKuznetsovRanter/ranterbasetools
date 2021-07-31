@@ -10,10 +10,6 @@ namespace RanterTools.Scenes
     /// </summary>
     public class SceneLoader : MonoBehaviour
     {
-        #region Events
-
-        #endregion Events
-        #region Parameters
         /// <summary>
         /// Reference to scene.
         /// </summary>
@@ -25,8 +21,7 @@ namespace RanterTools.Scenes
         /// </summary>
         [SerializeField]
         LoadSceneMode loadSceneMode;
-        #endregion Parameters
-        #region Methods
+        
         /// <summary>
         /// Load scene.
         /// </summary>
@@ -70,7 +65,6 @@ namespace RanterTools.Scenes
                 else SceneManager.UnloadSceneAsync(scene.Name);
             }
         }
-        #endregion Methods
     }
 
 

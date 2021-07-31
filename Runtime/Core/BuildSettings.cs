@@ -11,33 +11,28 @@ namespace RanterTools.Base
     [Serializable]
     public class BuildSettings
     {
-        #region Parameters
         public string buildVersion = $"0";
         public string buildNumberAndroid = $"0";
         public string buildNumberIOS = $"0";
         public string buildNumberWindows = $"0";
         public string buildNumberMacOS = $"0";
         public string buildNumberLinux = $"0";
-        #endregion Parameters
-        #region State
+        
         public string BuildVersion { get { return buildVersion; } }
         public string BuildNumberAndroid { get { return buildNumberAndroid; } }
         public string BuildNumberIOS { get { return buildNumberIOS; } }
         public string BuildNumberWindows { get { return buildNumberWindows; } }
         public string BuildNumberMacOS { get { return BuildNumberMacOS; } }
         public string BuildNumberLinux { get { return BuildNumberLinux; } }
-        #endregion State
     }
 
 
     public static class BaseSettings
     {
-        #region Parameters
         static BuildSettings buildSettings;
         [SerializeField]
         public static string buildSettingsFileName;
-        #endregion Parameters
-        #region State
+        
         public static BuildSettings BuildSettings
         {
             get
@@ -51,8 +46,7 @@ namespace RanterTools.Base
                 SaveOrCreateNew();
             }
         }
-        #endregion State
-        #region Methods
+        
         public static void LoadOrCreateBuildSettings()
         {
             if (buildSettings == null)
@@ -113,7 +107,6 @@ namespace RanterTools.Base
             SaveOrCreateNew();
         }
 #endif
-        #endregion Methods
     }
 
 }

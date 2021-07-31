@@ -7,13 +7,11 @@ namespace RanterTools.Movement
     [RequireComponent(typeof(Rigidbody2D))]
     public class Rigidbody2DMovement : MonoBehaviour, IDirectionalMovement, ITargetMovement
     {
-        #region Events
         /// <summary>
         /// Target point achieved event
         /// </summary>
         public event TargetPointAchievedDelegate TargetPointAchievedEvent;
-        #endregion Events
-        #region Parameters 
+        
         /// <summary>
         /// Scalar value of velocity
         /// </summary>
@@ -26,9 +24,7 @@ namespace RanterTools.Movement
         /// </summary>
         /// <value>Scalar value of velocity</value>
         public float Speed { get { return speed; } set { speed = Mathf.Clamp(value, 0, float.MaxValue); Rigidbody2D.velocity = direction.normalized * Speed; } }
-        #endregion Parameters 
-
-        #region State
+        
         /// <summary>
         /// Rigidbody2D cache
         /// </summary>
@@ -103,12 +99,7 @@ namespace RanterTools.Movement
         /// Have target
         /// </summary>
         bool directional = true;
-        #endregion State
-        #region Methods
-
-        #endregion Methods
-
-        #region Unity
+        
         /// <summary>
         /// Update is called every frame, if the MonoBehaviour is enabled.
         /// </summary>
@@ -130,6 +121,5 @@ namespace RanterTools.Movement
                 }
             }
         }
-        #endregion Unity
     }
 }

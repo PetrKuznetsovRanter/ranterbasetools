@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace RanterTools.Base
 {
-
-
     public class ToolsDebug
     {
         public static void Log(object log)

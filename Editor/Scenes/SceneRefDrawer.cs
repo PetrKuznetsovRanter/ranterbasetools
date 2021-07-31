@@ -13,7 +13,7 @@ namespace RanterTools.Scenes
     public class SceneRefDrawer : PropertyDrawer
     {
         /// <summary>
-        /// Rapint property.
+        /// Repaint property.
         /// </summary> 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

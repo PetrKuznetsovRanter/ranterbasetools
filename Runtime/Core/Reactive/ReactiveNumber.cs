@@ -7,7 +7,6 @@ namespace RanterTools.Base
 
     public struct ReactiveNumber<T> where T : struct
     {
-
         public delegate void ValueChangeDelegate(T value);
         public event ValueChangeDelegate OnValueChanged;
         T value;

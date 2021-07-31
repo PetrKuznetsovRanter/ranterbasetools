@@ -5,8 +5,6 @@ using RanterTools.Base;
 
 public class PooledObject : MonoBehaviour, IPooledObject
 {
-    #region Events
-    #region  IPooledObject
     /// <summary>
     /// Pooled object start event
     /// </summary>
@@ -15,10 +13,7 @@ public class PooledObject : MonoBehaviour, IPooledObject
     /// Pooled object destroy event
     /// </summary>
     public event System.Action PooledObjectDestroyEvent;
-    #endregion IPooledObject
-    #endregion Events
-    #region Parameters
-    #region  IPooledObject
+    
     /// <summary>
     /// Parent prefab used for creation this instance.
     /// </summary>
@@ -35,10 +30,6 @@ public class PooledObject : MonoBehaviour, IPooledObject
     /// </summary>
     /// <value>Parent pool container used for creation this instance</value>
     public PoolContainer ParentPoolContainer { get; set; }
-    #endregion IPooledObject
-    #endregion Parameters
-    #region Methods
-    #region  IPooledObject
     
     /// <summary>
     ///  Custom handler for start pooled game object
@@ -54,14 +45,12 @@ public class PooledObject : MonoBehaviour, IPooledObject
     {
         if (PooledObjectDestroyEvent != null) PooledObjectDestroyEvent();
     }
-    #endregion IPooledObject
 
     void PoolContainerDestroyed(PoolContainer poolContainer)
     {
         if (ParentPoolContainer == null || poolContainer == ParentPoolContainer) DestroyImmediate(gameObject);
     }
-    #endregion Methods
-    #region Unity
+    
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -76,5 +65,4 @@ public class PooledObject : MonoBehaviour, IPooledObject
     {
         PoolContainer.OnPoolContainerDestroyed -= PoolContainerDestroyed;
     }
-    #endregion Unity
 }

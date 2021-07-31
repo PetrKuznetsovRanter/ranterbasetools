@@ -11,21 +11,14 @@ namespace RanterTools.Base
     [DisallowMultipleComponent]
     public class DontDestroyOnLoad : MonoBehaviour
     {
-        #region Parameters
         /// <summary>
         /// Don't destroy on load flags.
         /// </summary>
         [SerializeField]
         DontDestroyOnLoadFlags flags = DontDestroyOnLoadFlags.MoveToCurrentSceneAfterRemoveComponent;
-
-        #endregion Parameters
-
-        #region State
+        
         bool ApplicationQuited = false;
-        #endregion State
-
-        #region Unity
-
+        
         /// <summary>
         /// Awake is called when the script instance is being loaded.
         /// </summary>
@@ -57,8 +50,6 @@ namespace RanterTools.Base
                 Destroy(gameObject);
             }
         }
-
-        #endregion Unity
     }
 
     /// <summary>

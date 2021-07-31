@@ -14,16 +14,14 @@ namespace RanterTools.Editor.Localization
     /// </summary>
     public class LocalizedTextEditor : EditorWindow
     {
-        #region Global State
         static LocalizedTextEditor localizedTextEditor;
-        #endregion Global State
-        #region State
+        
         /// <summary>
         /// List of key value pair for localized dictionary.
         /// </summary>
         public LocalizationData localizationData;
         Vector2 scrollPosition = Vector2.zero;
-        #endregion State
+        
         /// <summary>
         /// Init window method.
         /// </summary>

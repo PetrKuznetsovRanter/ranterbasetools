@@ -17,7 +17,6 @@ namespace RanterTools.Editor.Scenes
     [InitializeOnLoad]
     public class SceneHistoryMenu
     {
-        #region Global State
         /// <summary>
         /// Length of history.
         /// </summary>
@@ -43,9 +42,8 @@ namespace RanterTools.Editor.Scenes
         /// <typeparam name="SceneRef">Scene type.</typeparam>
         /// <returns></returns>
         static List<SceneRef> sceneHistoryList = new List<SceneRef>(maxLength);
-        #endregion Global State
-
-        #region Global Methods
+        
+        
 
         /// <summary>
         /// Load next scene in history.
@@ -218,9 +216,7 @@ namespace RanterTools.Editor.Scenes
             }
         }
 #endif
-        #endregion Global Methods
-
-        #region Global Constructors
+        
         static SceneHistoryMenu()
         {
 #if UNITY_5_0_OR_NEWER || UNITY_2017_1_OR_NEWER
@@ -233,6 +229,5 @@ namespace RanterTools.Editor.Scenes
 #endif
             cursor = 0;
         }
-        #endregion Global Constructors
     }
 }

@@ -11,7 +11,6 @@ namespace RanterTools.Base
     /// <typeparam name="T">Type of singleton</typeparam>
     public abstract class Singleton<T> where T : class, new()
     {
-        #region Global State
         /// <summary>
         /// Instance of singleton
         /// </summary>
@@ -32,7 +31,6 @@ namespace RanterTools.Base
                 return instance;
             }
         }
-        #endregion Global State
     }
 
 }

@@ -6,7 +6,6 @@ namespace RanterTools.Base
 {
     public interface IScoreDealer
     {
-        #region Parameters
         /// <summary>
         /// Use this score or ignore.
         /// </summary>
@@ -17,7 +16,6 @@ namespace RanterTools.Base
         /// </summary>
         /// <value>Amount of score that must be apply.</value>
         float Score { get; }
-        #endregion Parameters
     }
 
 }

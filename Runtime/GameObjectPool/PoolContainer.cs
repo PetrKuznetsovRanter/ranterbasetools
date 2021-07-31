@@ -9,10 +9,8 @@ namespace RanterTools.Base
     /// </summary>
     public class PoolContainer : MonoBehaviour
     {
-        #region Global State
         public static event System.Action<PoolContainer> OnPoolContainerDestroyed;
-        #endregion Global State
-        #region State
+        
         /// <summary>
         ///  Origin for instance or destroying pooled gameObjects.
         /// </summary>
@@ -26,8 +24,7 @@ namespace RanterTools.Base
             get { return parentOrigin; }
             set { parentOrigin = value; }
         }
-        #endregion State
-        #region Unity
+        
         /// <summary>
         /// This function is called when the MonoBehaviour will be destroyed.
         /// </summary>
@@ -35,7 +32,7 @@ namespace RanterTools.Base
         {
             if (OnPoolContainerDestroyed != null) OnPoolContainerDestroyed(this);
         }
-        #endregion Unity
+        
     }
 
 

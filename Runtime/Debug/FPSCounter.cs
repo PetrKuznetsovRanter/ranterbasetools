@@ -7,7 +7,6 @@ namespace RanterTools.Base
     [RequireComponent(typeof(Text))]
     public class FPSCounter : MonoBehaviour
     {
-        #region State
         const float fpsMeasurePeriod = 0.5f;
         int fpsAccumulator = 0;
         float fpsNextPeriod = 0;
@@ -32,9 +31,7 @@ namespace RanterTools.Base
                 return text;
             }
         }
-        #endregion State
-
-        #region Unity
+        
         private void Start()
         {
             fpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
@@ -54,6 +51,5 @@ namespace RanterTools.Base
                 Text.text = string.Format(display, currentFps);
             }
         }
-        #endregion Unity
     }
 }

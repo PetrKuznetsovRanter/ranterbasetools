@@ -10,10 +10,8 @@ namespace RanterTools.Base
 {
     public class BuildSettingsWindow : EditorWindow
     {
-        #region Global State
         static BuildSettingsWindow Instance = null;
-        #endregion Global State
-        #region Global Unity
+        
         [MenuItem(GlobalNames.MenuRanterTools + "/" + GlobalNames.BuildSettings + "/" + GlobalNames.BuildSettingsMenu)]
         public static void BuildSettingMenu()
         {
@@ -32,11 +30,7 @@ namespace RanterTools.Base
                 BaseSettings.buildSettingsFileName = "Assets/DefaultBuildSettings.asset";
             }
         }
-        #endregion Global Unity
-        #region Methods
-
-        #endregion Methods
-        #region Unity
+        
         /// <summary>
         /// OnGUI is called for rendering and handling GUI events.
         /// This function can be called multiple times per frame (one call per event).
@@ -104,7 +98,6 @@ namespace RanterTools.Base
             }
 
         }
-        #endregion Unity
     }
 
     class MyCustomBuildProcessor : IPreprocessBuildWithReport, IPostprocessBuildWithReport

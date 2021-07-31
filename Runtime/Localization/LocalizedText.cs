@@ -12,7 +12,6 @@ namespace RanterTools.Localization
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class LocalizedText : MonoBehaviour
     {
-        #region State
         TextMeshProUGUI tmproUGUIText;
 
         TextMeshProUGUI TMProUGUIText
@@ -20,15 +19,10 @@ namespace RanterTools.Localization
             get { return tmproUGUIText ?? GetComponent<TextMeshProUGUI>(); }
             set { tmproUGUIText = value; }
         }
-        #endregion
-
-        #region Parameters
-
+        
         [SerializeField]
         string key;
-        #endregion Parameters
-
-        #region Unity
+        
         /// <summary>
         /// Awake is called when the script instance is being loaded.
         /// </summary>
@@ -37,6 +31,5 @@ namespace RanterTools.Localization
             if (LocalizationManager.Instance != null)
                 TMProUGUIText.text = LocalizationManager.GetLocalizedValue(key);
         }
-        #endregion Unity
     }
 }

@@ -7,7 +7,6 @@ namespace RanterTools.Base
 
     public class SingletonBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {
-        #region Global State
         /// <summary>
         /// Flags describing the behavior of singleton
         /// </summary>
@@ -87,7 +86,6 @@ namespace RanterTools.Base
                 if (dontDestroyOnLoad != null) DestroyImmediate(dontDestroyOnLoad);
             }
         }
-        #endregion Global State
     }
 
     /// <summary>

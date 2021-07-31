@@ -8,28 +8,21 @@ namespace RanterTools.Base
     /// </summary>
     public class DamageDealer : MonoBehaviour, IDamageDealer
     {
-        #region Events
-        #region IDamageDealer
         /// <summary>
         /// Damage dealed event
         /// </summary>  
         public event DamageReceivedDelegate DamageDealedEvent;
-        #endregion IDamageDealer
-        #endregion Events
-        #region Parameters
+        
         [SerializeField]
         [Range(0, float.MaxValue)]
         float damage = 1;
-        #region IDamageDealer
+        
         /// <summary>
         /// Damage or amount
         /// </summary>
         /// <value>Damage or amount</value>
         public float Damage { get { return damage; } set { damage = Mathf.Clamp(value, 0, float.MaxValue); } }
-        #endregion IDamageDealer
-        #endregion Parameters
-        #region Methods
-        #region IDamageDealer
+        
         /// <summary>
         /// Deal damage
         /// </summary>
@@ -44,8 +37,6 @@ namespace RanterTools.Base
             damageReceiver.Damage(Damage);
             if (DamageDealedEvent != null) DamageDealedEvent(Damage);
         }
-        #endregion IDamageDealer
-        #endregion Methods
     }
 
 }

@@ -8,15 +8,6 @@ namespace RanterTools.Editor.Base
 {
     public static class ComponentsUtility
     {
-        #region Events
-
-        #endregion Events
-
-        #region Global State
-
-        #endregion Global State
-
-        #region Global Methods
         /// <summary>
         /// Remove all missing scripts
         /// </summary>
@@ -87,6 +78,5 @@ namespace RanterTools.Editor.Base
                 SelectMissingSciptsRecursive(gameObject.transform.GetChild(t).gameObject);
             }
         }
-        #endregion Global Methods
     }
 }

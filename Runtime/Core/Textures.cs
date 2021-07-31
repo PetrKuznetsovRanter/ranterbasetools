@@ -15,15 +15,6 @@ namespace RanterTools.Textures
 {
     public class Textures : MonoBehaviour
     {
-        #region Events
-
-        #endregion Events
-
-        #region Global State
-
-        #endregion Global State
-
-        #region Global Methods
         public static async Task<string> Texture2DToBase64Async(Texture2D texture)
         {
             SD.Stopwatch stopwatch = SD.Stopwatch.StartNew();
@@ -96,22 +87,6 @@ namespace RanterTools.Textures
         {
             return (imageData[offset] << 8) | imageData[offset + 1];
         }
-
-
-
-        #endregion Global Methods
-
-        #region Parameters
-
-        #endregion Parameters
-
-        #region State
-
-        #endregion State
-
-        #region Methods
-
-        #endregion Methods
     }
 
 

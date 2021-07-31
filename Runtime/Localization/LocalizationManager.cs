@@ -13,12 +13,9 @@ namespace RanterTools.Localization
     [RequireComponent(typeof(DontDestroyOnLoad))]
     public class LocalizationManager : SingletonBehaviour<LocalizationManager>
     {
-        #region Parameters
         [SerializeField]
         string missingTextString = "Localized text not found";
-        #endregion Parameters
-
-        #region State
+        
         Dictionary<string, string> localizedText = new Dictionary<string, string>();
         bool isReady = false;
         /// <summary>
@@ -29,9 +26,7 @@ namespace RanterTools.Localization
         {
             get { return isReady; }
         }
-        #endregion State
-
-        #region Global Methods
+        
         /// <summary>
         /// Get localized value
         /// </summary>
@@ -46,10 +41,7 @@ namespace RanterTools.Localization
             }
             return result;
         }
-        #endregion Global Methods
-
-        #region Methods
-
+        
         void LoadLocalizedText(string fileName)
         {
             string filePath;
@@ -95,10 +87,7 @@ namespace RanterTools.Localization
             }
             isReady = true;
         }
-        #endregion Methods
-
-
-        #region Unity
+        
         /// <summary>
         /// Start is called on the frame when a script is enabled just before
         /// any of the Update methods is called the first time.
@@ -124,7 +113,6 @@ namespace RanterTools.Localization
                     }
             }
         }
-        #endregion Unity
     }
 
 }

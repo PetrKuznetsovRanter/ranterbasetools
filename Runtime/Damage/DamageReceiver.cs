@@ -9,8 +9,6 @@ namespace RanterTools.Base
     /// </summary>
     public class DamageReceiver : MonoBehaviour, IDamageReceiver
     {
-        #region Events 
-        #region IDamageReceiver
         /// <summary>
         /// Damage received event
         /// </summary>
@@ -27,26 +25,21 @@ namespace RanterTools.Base
         /// Resurrect event
         /// </summary>
         public event DamageReceivedDelegate ResurrectEvent;
-        #endregion IDamageReceiver
-        #endregion Events
-
-        #region Parameters
+        
         /// <summary>
         /// Initiated health point
         /// </summary>
         [SerializeField]
         [Range(0, float.MaxValue)]
         float initiatedHealthPoint;
-        #region IDamageReceiver
+      
         /// <summary>
         /// Initiated health point
         /// </summary>
         /// <value>Initiated health point</value>
         public float InitiatedHealthPoint { get { return initiatedHealthPoint; } set { initiatedHealthPoint = Mathf.Clamp(initiatedHealthPoint, 0, float.MaxValue); } }
-        #endregion IDamageReceiver
-        #endregion Parameters
-
-        #region State
+        
+        
         /// <summary>
         /// Current health point
         /// </summary>
@@ -56,10 +49,8 @@ namespace RanterTools.Base
         /// </summary>
         /// <value>Current health point</value>
         public float HealthPoint { get { return healthPoint; } }
-        #endregion State
-
-        #region Methods
-        #region IDamageReceiver
+        
+        
         /// <summary>
         /// Restore some amount hp.
         /// </summary>
@@ -95,10 +86,7 @@ namespace RanterTools.Base
                 if (DamageReceivedEvent != null) DamageReceivedEvent(damage);
             }
         }
-        #endregion IDamageReceiver
-        #endregion Methods
-
-        #region Unity
+        
         /// <summary>
         /// Awake is called when the script instance is being loaded.
         /// </summary>
@@ -106,7 +94,5 @@ namespace RanterTools.Base
         {
             Resurrect();
         }
-        #endregion Unity
-
     }
 }

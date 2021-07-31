@@ -6,8 +6,6 @@ using UnityEngine;
 
 namespace BummerTools.Base
 {
-
-
     public class HashMD5
     {
         public static string GetHashMD5(string text)

@@ -9,13 +9,11 @@ namespace RanterTools.Movement
     /// </summary>
     public interface ITargetMovement
     {
-        #region Events
         /// <summary>
         /// Target point achieved event
         /// </summary>
         event TargetPointAchievedDelegate TargetPointAchievedEvent;
-        #endregion Events
-        #region Parameters  
+        
         float Speed { get; set; }
         /// <summary>
         ///  Get/set a dynamic target for moving an object
@@ -27,7 +25,6 @@ namespace RanterTools.Movement
         /// </summary>
         /// <value>Static target</value>
         Vector3 StaticTarget { get; set; }
-        #endregion Parameters 
     }
 
 }

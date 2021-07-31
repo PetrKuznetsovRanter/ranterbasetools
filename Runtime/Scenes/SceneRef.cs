@@ -6,7 +6,6 @@ namespace RanterTools.Scenes
     [System.Serializable]
     public class SceneRef
     {
-        #region State
         /// <summary>
         /// Reference to scene asset.
         /// </summary>
@@ -25,8 +24,7 @@ namespace RanterTools.Scenes
         {
             get { return name; }
         }
-        #endregion State
-        #region Methods
+        
         /// <summary>
         /// Makes it work with the existing Unity methods (LoadLevel/LoadScene)
         /// </summary>
@@ -35,9 +33,7 @@ namespace RanterTools.Scenes
         {
             return scene.Name;
         }
-        #endregion Methods
-
-        #region Constructors
+        
         /// <summary>
         /// Standart constructor.
         /// </summary>
@@ -46,6 +42,5 @@ namespace RanterTools.Scenes
         {
             this.name = name;
         }
-        #endregion Constructors
     }
 }
